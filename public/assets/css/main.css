@@ -14,13 +14,13 @@
     text-align: left;
     color: black;
     text-align: left;
-    background-image:url('../img/bg_leftsidebar.jpg');
+    background-image:url('../img/bg_leftsidebar4.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     opacity:0.8;
 }
-@media (max-width:1024px) {
+@media (max-width:992px) {
     .leftsidebar{
         top: auto;
         bottom: auto;
@@ -32,9 +32,6 @@
         padding-bottom: 0
     }
 }
-
-
-
 .picofme{
    width:10vw;
    margin-top:5vh;
@@ -47,7 +44,6 @@
     font-family: Trebuchet MS;
     color:black;
     margin-top:2vh;
-    
     max-width:100%;
 }
 .soustitre{
@@ -56,7 +52,6 @@
     color:black;
     overflow-wrap:break-word;
     margin-top:2vh;
-    
     max-width:100%;
 }
 .contact{
@@ -71,7 +66,6 @@
     color:black;
     overflow-wrap:break-word;
     margin-top:2vh;
-    
 }
 .contactinfos a:hover { 
     color: black;
@@ -84,9 +78,6 @@
 }
 .logolinke{
     max-width:1.5em;
-}
-.rightside{
-    text-align: center;
 }
 .titrequisuisje{
     text-align:left;
@@ -114,14 +105,54 @@
     width:40vw;
     margin-left: 12.5vw;
 }
-@media (max-width: 1024px)
-{
-    .rightside{
-        margin-left:0;
-    }
+.slide{
+    width:95%;
+    margin-left:2.5%;
+}	
+.screenshot{
+    width:100%;
+    display:block;
+    border:2px solid black;
 }
 
 
+.block-realizations-description .list-obj{
+    margin-bottom:0;
+    text-align:justify;
+}
+.field-description{
+    font-weight: bold;
+    font-family: Trebuchet MS;
+}
+.field-description ul{
+    font-weight: bold;
+    display:inline;
+}
+.slick-prev:before, .slick-next:before { 
+    color:black !important;
+}
+.slick-center{
+    margin-left:3vw;
+    margin-right:3vw;
+}
+.slick-slide{
+     -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.slick-center .image-culture{
+    height:25vh;
+    max-width:95vw;
+    filter:brightness(100%);
+}
+.image-culture{
+    height:15vh;
+    filter:brightness(10%);
+}
+#slide-description{
+    font-size: 1.5em;
+    font-family: Trebuchet MS;
+    text-align: center;
+}
 @font-face{font-family:Roboto;font-style:italic;font-weight:300;src:local('Roboto Light Italic'),local('Roboto-LightItalic'),url(http://fonts.gstatic.com/s/roboto/v18/7m8l7TlFO-S3VkhHuR0at50EAVxt0G0biEntp43Qt6E.ttf) format('truetype')}@font-face{font-family:Roboto;font-style:italic;font-weight:500;src:local('Roboto Medium Italic'),local('Roboto-MediumItalic'),url(http://fonts.gstatic.com/s/roboto/v18/OLffGBTaF0XFOW1gnuHF0Z0EAVxt0G0biEntp43Qt6E.ttf) format('truetype')}@font-face{font-family:Roboto;font-style:normal;font-weight:300;src:local('Roboto Light'),local('Roboto-Light'),url(http://fonts.gstatic.com/s/roboto/v18/Hgo13k-tfSpn0qi1SFdUfaCWcynf_cDxXwCLxiixG1c.ttf) format('truetype')}@font-face{font-family:Roboto;font-style:normal;font-weight:400;src:local('Roboto'),local('Roboto-Regular'),url(http://fonts.gstatic.com/s/roboto/v18/zN7GBFwfMP4uA6AR0HCoLQ.ttf) format('truetype')}@font-face{font-family:Roboto;font-style:normal;font-weight:500;src:local('Roboto Medium'),local('Roboto-Medium'),url(http://fonts.gstatic.com/s/roboto/v18/RxZJdnzeo3R5zSexge8UUaCWcynf_cDxXwCLxiixG1c.ttf) format('truetype')}/*!
  *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)

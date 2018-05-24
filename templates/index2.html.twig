@@ -3,10 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>{% block title %}Clément Thuet{% endblock %}</title>
+        <title>{% block title %}Portfolio - Clément Thuet {% endblock %}</title>
         {% block stylesheets %}
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
             <link rel="stylesheet" href="{{asset('assets/css/main.css')}}" />
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"/>
         {% endblock %}
     </head>
     <body>
@@ -40,7 +42,7 @@
                         </ul>
                         <ul>
                           <li class=""><a href="/about-me/">About me</a></li>
-                          <li><a href="http://jackthenomad.com/" target="_blank">Personal blog</a></li>
+                          <li><a href="#" target="_blank">Personal blog</a></li>
                           <li class=""><a href="/talks/">My talks</a></li>
                         </ul>
                       </div>
@@ -61,7 +63,7 @@
 
         
         
-        <div class="col-md-9 offset-sm-3 col-sm-12 col-12 rightside">
+        <div class="col-lg-9 offset-lg-3 col-sm-12 col-12 rightside">
             <h1>Vous chercher un développeur web ?<br> Vous êtes au bon endroit</h1>
             <h2 class="titrequisuisje">Qui suis-je ?</h2>
             <p class='paraQuisuisje'> Je m'appelle Clément Thuet, j'ai commencé le développement web car 
@@ -86,40 +88,248 @@
             
         <hr>
             <h2 class='titrecequejesaisfaire'>Mes derniers projets</h2>
-            <div class='row'>
-                <div class='col-md-6 col-12'>
-                    Test
+            
+            <div class="slide">
+                <div>
+                    <div class='row block-realizations'>
+                        <button class="slick-prev slick-arrow" aria-label="Previous" type="button" style="">Previous</button>
+                        <div class='col-md-6 col-sm-12 col-12'>
+                            <h3> Logiciel de gestion médicale</h3>
+                            <img class='screenshot' src="{{asset('assets/img/screenshots/mtcdp_fichepatient.png')}}" alt="Screenshot projet gestion médicale, fiche patient">
+                        </div>
+                        <div class='col-md-6 col-12 block-realizations-description'>
+                            <span class='field-description'>Année : </span> 2018<br>
+                            <span class='field-description'>Client : </span> David Pace, médecin traditionnel chinois (Oise)<br>
+                            <span class='field-description'>Objectifs : </span>
+                            <ul class='list-obj'>
+                                <li>Gérer les informations des patients : informations personnelles, antécédents, allergies, historique des visites et des traitements, etc</li>
+                                <li>Éditer des documents : prescriptions, notes d'honoraire et rattacher aux patients des documents externes (comptes rendu médicaux, radiographies, etc)</li>
+                                <li>Suivre les variations du stock</li>
+                                <li>Avoir une base de données des produits prescriptibles</li>
+                                <li>Analyser l'évolution du chiffre d'affaire</li>
+                            </ul>
+                          <span class='field-description'>Mon rôle : </span>Étude des besoins, proposition de solutions, développement, mise en place, améliorations après retours<br>
+                          <span class='field-description'>Technologies : </span>Symfony 4, Twig, Twitter Bootstrap, JQuery
+                        </div>
+                    </div>
                 </div>
-                <div class='col-md-6 col-12'>
-                    Test
+                <div>
+                    <div class='row block-realizations'>
+                        <div class='col-md-6 col-sm-12 col-12 '>
+                            <h3> Logiciel de gestion d'une bibliothèque</h3>
+                            <img class='screenshot' src="{{asset('assets/img/screenshots/mtcdp_fichepatient.png')}}" alt="Screenshot projet gestion bibliothque, fiche patient">
+                        </div>
+                        <div class='col-md-6 col-12 block-realizations-description'>
+                            <span class='field-description'>Année : </span> 2017<br>
+                            <span class='field-description'>Client : </span> Marie-Bénédicte, enseignante et directice d'école maternelle (Oise)<br>
+                            <span class='field-description'>Objectifs : </span>
+                            <ul class='list-obj'>
+                                <li>Mettre en place le suivi des livres que possède l'école grâce à des codes barres</li>
+                                <li>Suivre les emprunts réalisés et les échanges avec d'autres bibliothèques</li>
+                                <li>Permettre aux élèves (3-5 ans) de réaliser leurs emprunts en autonomie avec une douchette</li>
+                            </ul>
+                            <span class='field-description'>Mon rôle : </span>Étude des besoins, proposition de solutions, développement, mise en place, améliorations après retours<br>
+                            <span class='field-description'>Technologies : </span>Symfony 4, Twig, Twitter Bootstrap
+                        </div>
+                    </div>
                 </div>
             </div>
-        
-        
-        
+                        
+            <hr>
+            
+            <h2 class='titrecequejesaisfaire'>Culture</h2>
+           Pour mieux me connaitre ...
+            			
+                <div class="slider-culture" >
+                    <div>
+                        <div class="description" data-categorie='filmseries' style="display:none;">Films et séries</div>
+                        <div>
+                            <img class="image-culture"  src="{{asset('assets/img/culture_logo_films.png')}}" alt="logo 9GAG">
+                        </div>
+                    </div>
+                    <div>
+                        <div  class="description"  data-categorie='musique' style="display:none;">Musique</div>
+                        <div>
+                            <img class="image-culture" onclick="showSlide('musique');" src="{{asset('assets/img/culture_logo_musique.png')}}" alt="logo 9GAG">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="description" style="display:none;" >Sports</div>
+                        <div>
+                            <img class="image-culture" src="{{asset('assets/img/culture_logo_sport.png')}}" alt="logo 9GAG">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="description" style="display:none;">Lectures</div>
+                        <div>
+                            <img class="image-culture" src="{{asset('assets/img/culture_logo_lecture.png')}}" alt="logo 9GAG">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="description" style="display:none;">Jeux vidéos</div>
+                        <div>
+                            <img class="image-culture" src="{{asset('assets/img/culture_logo_jeuxvideos.png')}}" alt="logo 9GAG">
+                        </div>
+                    </div>
+                    {#<div>
+                        <div class="description" style="display:none;">Divers</div>
+                        <div>
+                            <img class="image-culture" src="{{asset('assets/img/culture_logo_LoL.png')}}" alt="logo 9GAG">
+                        </div>
+                    </div>#}
+                </div>
+                        
+                <div class="slider-filmseries" >
+                    <div>
+                        <div class="description" >Films et séries</div>
+                        <div>
+                            <img class="image-culture"  src="{{asset('assets/img/culture_image_timeout.jpg')}}" alt="logo 9GAG">
+                        </div>
+                    </div>
+                    <div>
+                        <div  class="description"  style="display:none;">Musique</div>
+                        <div>
+                            <img class="image-culture" src="{{asset('assets/img/culture_image_fightclub.png')}}" alt="logo 9GAG">
+                        </div>
+                    </div>
+                </div>
+                        
+                <div class="slider-musique" >
+                    <div>
+                        <div class="description" style="display:none;">Médine</div>
+                        <div>
+                            <img class="image-culture"  src="{{asset('assets/img/culture_image_medine.jpg')}}" alt="logo 9GAG">
+                        </div>
+                    </div>
+                    <div>
+                        <div  class="description"  style="display:none;">Kery James</div>
+                        <div>
+                            <img class="image-culture"  src="{{asset('assets/img/culture_image_keryjames.jpg')}}" alt="logo 9GAG">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="description" style="display:none;" >Lindsey</div>
+                        <div>
+                            <img class="image-culture" src="{{asset('assets/img/culture_image_lindseystirling.jpg')}}" alt="logo 9GAG">
+                        </div>
+                    </div>
+                </div>
+                        
+                        
+                <p id="slide-description">
+
+                </p>       
+    
         </div>
-        
+        <br> <br> <br>
         
         </main>
         {% endblock %}
         {% block javascripts %}
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js'></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+ 
         <script>
-         /*   window.onscroll = function() {onscroll1();};
+        //Show the slides on click on category slide
+        function showSlide(categorie){
+           /* $(".slider-filmseries").hide();
+            $(".slider-musique").hide();*/
+        }
+            
+         $(document).ready(function() {
+             //Hide all the sub-category slide onload
+            //$(".slider-filmseries").hide();
+            $(".slider-musique").hide();
+            
+            //Slide portfolio
+            $(".slide").slick({
+              infinite: true,
+              arrow:false,
+              cssEase: "cubic-bezier(0.175, 0.885, 0.32, 1.275)",
+              speed: 900,
+              dots:true,
+              accessibility:false
+            });
+            
+            //Slide culture categories
+            $(".slider-culture").slick({
+                centerMode: true,
+                 infinite: true,
+                 centerPadding: '100px',
+                 slidesToShow: 1,
+                 speed: 0,
+                 variableWidth: true,
+                cssEase: "ease-in-out",
+                accessibility:false
+               
+            });
+            
+            $(".slider-filmseries").slick({
+                centerMode: true,
+                 infinite: true,
+                 centerPadding: '100px',
+                 slidesToShow: 1,
+                 speed: 0,
+                 variableWidth: true,
+                cssEase: "ease-in-out",
+                accessibility:false
+            });
+            
+            $(".slider-musique").slick({
+                centerMode: true,
+                 infinite: true,
+                 centerPadding: '100px',
+                 slidesToShow: 1,
+                 speed: 0,
+                 variableWidth: true,
+                cssEase: "ease-in-out",
+                accessibility:false
+               
+            });
+          });
+            
+            $('.next').click(function() {
+            $(".slide").slick('slickNext');
+          });
 
-        function onscroll1() {
-            if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
-              document.getElementById("apropos").style.display="none";
-              document.getElementById("competences").style.display="block";
-              
-            } else {
-            document.getElementById("apropos").style.display="block";
-              document.getElementById("competences").style.display="none";
-            }
-        }*/
-            </script>
-        
+          $('.prev').click(function() {
+            $(".slide").slick('slickPrev');
+         });
+         
+        $(".slider-culture").on('init', function(event, slick, direction){
+            var descri = $('.slick-center .description').html();
+            var divResult=$('#slide-description');
+            divResult.text(descri);
+            
+        });
+        $('.slider-culture').click(function() {
+            var descri = $('.slick-center .description').html();
+            var divResult=$('#slide-description');
+            divResult.text(descri);
+            
+            var categorie = $('.slick-center .description').attr('data-categorie');
+             //Hide all sub-categoies
+            $(".slider-musique").hide();
+            $(".slider-filmseries").hide();
+            $(".slider-"+categorie).show();
+         });
+         
+        $(".slider-culture").on('swipe', function(event, slick, direction){
+            var descri = $('.slick-center .description').html();
+            var divResult=$('#slide-description');
+            divResult.text(descri);
+            var categorie = $('.slick-center .description').attr('data-categorie');
+             //Hide all sub-categoies
+            $(".slider-musique").hide();
+            $(".slider-filmseries").hide();
+            $(".slider-"+categorie).show();
+            
+           
+        });
+   
+       
+        </script>
         <script>
         var ctx = document.getElementById("myChart");
         var myChart = new Chart(ctx, {
@@ -127,7 +337,7 @@
             data: {
                 labels: ["HTML/CSS", "JS",'PHP','Symfony','Photoshop'],
                 datasets: [{
-                    data: [2.8, 2.5,3.1, 3,1.2],
+                    data: [3, 2.5,3.1, 3,1.2],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
